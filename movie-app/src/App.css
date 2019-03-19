@@ -1,0 +1,161 @@
+@import url("https://fonts.googleapis.com/css?family=Sniglet");
+.body {
+  background-color: black;
+  height: 2600px;
+  font-family: "Sniglet", cursive;
+  overflow: visible;
+}
+.card {
+  color: white;
+  width: 390px;
+  height: 30px;
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  top: 172px;
+  left: 449px;
+  font-size: 24px;
+}
+.moviecard p + p {
+  font-size: 14px;
+  color: rgba(194, 193, 185, 0.5);
+}
+.movie {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  background-color: black;
+}
+.form {
+  width: 100%;
+  height: 215px;
+  display: flex;
+  justify-content: center;
+  background-color: black;
+  background-image: url("./components/Movie_Art_-_The_Matrix_-_Morpheus_Red_Pill_Or_Blue_Pill_-_Hollywood_Collection_1b59bcd0-9df7-46fa-864f-b83bdedba01c.jpg");
+  background-repeat: no-repeat;
+  background-position: 50% -120%;
+}
+.search-form {
+  margin-top: 15px;
+}
+.movies-found {
+  position: relative;
+  top: -194px;
+  left: 350px;
+  color: white;
+  display: inline;
+  font-size: 18px;
+}
+.moviecard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px 0;
+}
+#container {
+  width: 300px;
+  height: 450px;
+  margin: 15px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, 1fr);
+}
+#container img {
+  grid-column: 1;
+  grid-row: 1 / span 3;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+#container p {
+  width: 290px;
+  visibility: hidden;
+  text-align: center;
+  grid-column: 1;
+  grid-row: 2;
+  align-self: center;
+  justify-self: center;
+  z-index: 1;
+}
+#container:hover p {
+  visibility: visible;
+  box-shadow: 0 0 10px rgba(212, 183, 15, 0.5);
+}
+#container:hover img {
+  opacity: 0.1;
+}
+.moviecard p {
+  width: 300px;
+  font-size: 18px;
+  color: white;
+  margin: 0;
+  padding: 0;
+  text-align: start;
+}
+.release-date {
+  width: 40px;
+  color: white;
+  background-color: rgba(14, 12, 12, 0.5);
+  text-align: center;
+  position: relative;
+  left: 260px;
+  top: -20px;
+  border-radius: 2px;
+  box-shadow: 0 0 10px rgba(212, 183, 15, 0.5);
+}
+.moviecard:hover {
+  z-index: 2;
+  transform: scale(1.2);
+  transition: all 0.4s linear 0.2s;
+}
+input[type="radio"] {
+  background-color: transparent;
+  border: 0.0625em solid rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  box-shadow: inset 0 0 0 0 white;
+  cursor: pointer;
+  font: inherit;
+  height: 1em;
+  outline: none;
+  width: 1em;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+}
+input:checked {
+  background-color: #8c0d07;
+  box-shadow: inset 0 0 0 0.1875em #8c0d07;
+  -webkit-transition: background 0.15s, box-shadow 0.1s;
+  transition: background 0.15s, box-shadow 0.1s;
+}
+input[type="radio"]:checked ~ label {
+  color: #8c0d07;
+}
+strong {
+  display: block;
+  font-size: 0.5em;
+  line-height: 3em;
+}
+.search-btn {
+  background: #8c0d07;
+  color: white;
+  font: "trebuchet ms", trebuchet;
+  padding: 10px 20px;
+  border-radius: 0 10px 10px 0;
+  -moz-border-radius: 0 10px 10px 0;
+  -webkit-border-radius: 0 10px 10px 0;
+  -o-border-radius: 0 10px 10px 0;
+  border: 0 none;
+  font-weight: bold;
+}
+#search-box {
+  background: #eee;
+  padding: 10px;
+  border-radius: 10px 0 0 10px;
+  -moz-border-radius: 10px 0 0 10px;
+  -webkit-border-radius: 10px 0 0 10px;
+  -o-border-radius: 10px 0 0 10px;
+  border: 0 none;
+  width: 160px;
+}
