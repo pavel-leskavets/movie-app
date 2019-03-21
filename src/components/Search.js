@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import SearchButton from "./SearchButton";
 import MovieCard from "./MovieCard";
-import "../../src/App.css"
 
 class Search extends Component {
   constructor(props) {
@@ -51,26 +50,28 @@ class Search extends Component {
 
   render() {
     return (
-      <div className="body">
-        <div className="form">
-          <form onSubmit={this.handleSubmit} className="search-form" id="searchthis">
-            <input type="text" id="search-box" value={this.state.value} onChange={this.handleChange} />
-            <SearchButton name="Search" />
-          </form>
-        </div>
+      <div>
+        <div className="change-form">
+          <div className="form">
+            <form onSubmit={this.handleSubmit}  id="searchthis">
+              <input type="text" id="search-box" value={this.state.value} onChange={this.handleChange} />
+              <SearchButton name="Search" />
+            </form>
+          </div>
 
-        <div class="card">
-          <div className="title-button">
-            <input type="radio" name="title" id="one" value="title" checked={this.state.radioGroup.title} onChange={this.handleRadio} />
-            <label for="one"> Title</label>
+          <div className="card">
+            <div>              
+              <input type="radio" name="title" id="one" value="title" checked={this.state.radioGroup.title} onChange={this.handleRadio} />
+              <label htmlFor="one"> Title</label>              
+            </div>
+            <div>
+              <input type="radio" name="genres" id="two" value="genres" checked={this.state.radioGroup.genres} onChange={this.handleRadio} />
+              <label htmlFor="two"> Genres </label>
+            </div>
           </div>
-          <div className="genres-button">
-            <input type="radio" name="genres" id="two" value="genres" checked={this.state.radioGroup.genres} onChange={this.handleRadio} />
-            <label for="two">Genres </label>
+          <div className="movies-found">
+            {this.state.movies.length} Movies found
           </div>
-        </div>
-        <div className="movies-found">
-          {this.state.movies.length} Movies found
         </div>
         <div className="movie">
           {" "}{this.state.movies.map(movie => (<MovieCard {...movie} />))}{" "}

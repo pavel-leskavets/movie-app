@@ -15,6 +15,7 @@ class MovieCard extends Component {
           {genres.slice(1, 3).join(" & ")}{" "}
           <div className="release-date">{release_date.substring(0, 4)}</div>
         </p>
+        
       </div>
     );
   }
