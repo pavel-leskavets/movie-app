@@ -1,0 +1,145 @@
+@import url("https://fonts.googleapis.com/css?family=Sniglet");
+body {
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  font-family: "Sniglet", cursive;
+  overflow: visible;
+}
+.change-form {
+  display: flex;
+  width: 100%;
+  height: 220px;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 5px; 
+  background-image: url("./components/Morpheus.jpg");
+  background-repeat: no-repeat;
+  background-position: 50% 170%;
+  background-size: 190px 200px;
+}
+.card {
+  color: white;
+  width: 360px;
+  height: 30px;
+  display: flex;
+  justify-content: space-between;
+  margin: 15px 0 0 20px; 
+  font-size: 24px;
+}
+.movie {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.movies-found {
+  color: white;
+  font-size: 18px;
+  padding: 15px;
+  margin-bottom: -25px;
+}
+.moviecard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px 0;
+}
+#container {
+  width: 300px;
+  height: 450px;
+  margin: 15px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, 1fr);
+}
+#container img {
+  grid-column: 1;
+  grid-row: 1 / span 3;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+#container p {
+  width: 290px;
+  visibility: hidden;
+  text-align: center;
+  grid-column: 1;
+  grid-row: 2;
+  align-self: center;
+  justify-self: center;
+  z-index: 1;
+  color: white;
+}
+#container:hover p {
+  visibility: visible;
+  box-shadow: 0 0 10px rgba(212, 183, 15, 0.5);
+}
+#container:hover img {
+  opacity: 0.1;
+}
+.title, .genre {
+  width: 300px;
+  font-size: 18px;
+  color: white;
+  margin: 0;
+  padding: 0;
+  text-align: start;
+}
+.genre {
+  font-size: 14px;
+  color: rgba(194, 193, 185, 0.5);
+}
+.release-date {
+  width: 40px;
+  color: white;
+  background-color: rgba(14, 12, 12, 0.5);
+  text-align: center;
+  position: relative;
+  left: 260px;
+  top: -20px;
+  border-radius: 2px;
+  box-shadow: 0 0 10px rgba(212, 183, 15, 0.5);
+}
+.moviecard:hover {
+  z-index: 2;
+  transform: scale(1.2);
+  transition: all 0.4s linear 0.2s;
+}
+input[type="radio"] {
+  background-color: transparent;
+  border: 0.0625em solid rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  box-shadow: inset 0 0 0 0 white;
+  cursor: pointer;
+  font: inherit;
+  height: 1em;
+  outline: none;
+  width: 1em;
+  -webkit-appearance: none;
+}
+input:checked {
+  background-color: #8c0d07;
+  box-shadow: inset 0 0 0 0.1875em #8c0d07;
+  transition: background 0.15s, box-shadow 0.1s;
+}
+input[type="radio"]:checked ~ label {
+  color: #8c0d07;
+}
+.search-btn {
+  background: #8c0d07;
+  color: white;
+  font: "trebuchet ms", trebuchet;
+  padding: 10px 20px;
+  border-radius: 0 10px 10px 0;
+  border: 0 none;
+  font-weight: bold;
+}
+#search-box {
+  background: #eee;
+  padding: 10px;
+  border-radius: 10px 0 0 10px;
+  border: 0 none;
+  width: 160px;
+}
