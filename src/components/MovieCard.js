@@ -10,11 +10,11 @@ class MovieCard extends Component {
           <img src={poster_path} alt={title} />
           <p>{overview}</p>
         </div>
-        <p>{title}</p>
-        <p className="title">
+        <div className="title">{title}</div>
+        <div className="genre">
           {genres.slice(1, 3).join(" & ")}{" "}
           <div className="release-date">{release_date.substring(0, 4)}</div>
-        </p>
+        </div>
         
       </div>
     );

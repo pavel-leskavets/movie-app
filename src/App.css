@@ -28,10 +28,6 @@ body {
   margin: 15px 0 0 20px; 
   font-size: 24px;
 }
-.moviecard p + p {
-  font-size: 14px;
-  color: rgba(194, 193, 185, 0.5);
-}
 .movie {
   width: 100%;
   display: flex;
@@ -74,6 +70,7 @@ body {
   align-self: center;
   justify-self: center;
   z-index: 1;
+  color: white;
 }
 #container:hover p {
   visibility: visible;
@@ -82,13 +79,17 @@ body {
 #container:hover img {
   opacity: 0.1;
 }
-.moviecard p {
+.title, .genre {
   width: 300px;
   font-size: 18px;
   color: white;
   margin: 0;
   padding: 0;
   text-align: start;
+}
+.genre {
+  font-size: 14px;
+  color: rgba(194, 193, 185, 0.5);
 }
 .release-date {
   width: 40px;

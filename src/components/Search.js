@@ -74,7 +74,7 @@ class Search extends Component {
           </div>
         </div>
         <div className="movie">
-          {" "}{this.state.movies.map(movie => (<MovieCard {...movie} />))}{" "}
+          {" "}{this.state.movies.map(movie => (<MovieCard key={movie.title} {...movie} />))}{" "}
         </div>
       </div>
     );
