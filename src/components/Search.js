@@ -45,7 +45,9 @@ class Search extends Component {
   };
 
   creatingQqueryString = () => {
-    return `https://reactjs-cdp.herokuapp.com/movies?search=${this.state.value}&searchBy=${this.state.type}&limit=20`;
+    return `https://reactjs-cdp.herokuapp.com/movies?search=${
+      this.state.value
+    }&searchBy=${this.state.type}&limit=20`;
   };
 
   render() {
@@ -53,19 +55,39 @@ class Search extends Component {
       <div>
         <div className="change-form">
           <div className="form">
-            <form onSubmit={this.handleSubmit}  id="searchthis">
-              <input type="text" id="search-box" value={this.state.value} onChange={this.handleChange} />
+            <form onSubmit={this.handleSubmit} id="searchthis">
+              <input
+                type="text"
+                id="search-box"
+                placeholder="enter movie title or genre"
+                value={this.state.value}
+                onChange={this.handleChange}
+              />
               <SearchButton name="Search" />
             </form>
           </div>
 
           <div className="card">
-            <div>              
-              <input type="radio" name="title" id="one" value="title" checked={this.state.radioGroup.title} onChange={this.handleRadio} />
-              <label htmlFor="one"> Title</label>              
+            <div>
+              <input
+                type="radio"
+                name="title"
+                id="one"
+                value="title"
+                checked={this.state.radioGroup.title}
+                onChange={this.handleRadio}
+              />
+              <label htmlFor="one"> Title</label>
             </div>
             <div>
-              <input type="radio" name="genres" id="two" value="genres" checked={this.state.radioGroup.genres} onChange={this.handleRadio} />
+              <input
+                type="radio"
+                name="genres"
+                id="two"
+                value="genres"
+                checked={this.state.radioGroup.genres}
+                onChange={this.handleRadio}
+              />
               <label htmlFor="two"> Genres </label>
             </div>
           </div>
@@ -74,7 +96,10 @@ class Search extends Component {
           </div>
         </div>
         <div className="movie">
-          {" "}{this.state.movies.map(movie => (<MovieCard key={movie.title} {...movie} />))}{" "}
+          {" "}
+          {this.state.movies.map(movie => (
+            <MovieCard key={movie.title} {...movie} />
+          ))}{" "}
         </div>
       </div>
     );
