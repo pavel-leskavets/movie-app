@@ -59,7 +59,8 @@ class Search extends Component {
               <input
                 type="text"
                 id="search-box"
-                placeholder="enter movie title or genre"
+                placeholder="
+                Select search type and enter title"
                 value={this.state.value}
                 onChange={this.handleChange}
               />
