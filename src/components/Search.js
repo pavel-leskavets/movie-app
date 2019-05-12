@@ -45,7 +45,7 @@ class Search extends Component {
   };
 
   creatingQqueryString = () => {
-    return `https://reactjs-cdp.herokuapp.com/movies?search=${this.state.value}&searchBy=${this.state.type}`;
+    return `https://reactjs-cdp.herokuapp.com/movies?search=${this.state.value}&searchBy=${this.state.type}&limit=20`;
   };
 
   render() {
